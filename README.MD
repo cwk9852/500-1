@@ -5,7 +5,7 @@ Critical Thinking 1a -
 ![](img/image138.jpg)
 
 Critical Thinking 1b -
-![](graphoutput.jpg)
+![](graphoutput.png)
 
 
 ### Technologies Used
