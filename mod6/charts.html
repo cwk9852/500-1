@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart and barchart packages.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart and bar chart when Charts is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Cancer');
+        data.addColumn('number', 'Frequency');
+        data.addRows([
+        ['ALL',37865],
+        ['AML',77457],
+        ['AMLti',2253],
+        ['APL',5444],
+        ['benign',188371],
+        ['bladder',411777],
+        ['bone',21593],
+        ['brain',126347],
+        ['breast',1403035],
+        ['breastCIS',292035],
+        ['cervix',94937],
+        ['CLL',118932],
+        ['CML',28076],
+        ['CMML',7400],
+        ['colon',706269],
+        ['esophagus',90817],
+        ['eye',17480],
+        ['femGen',37007],
+        ['femGenCIS',54233],
+        ['gallBladder',59259],
+        ['GI',11446],
+        ['giCIS',77327],
+        ['guCIS',12319],
+        ['HCL',6223],
+        ['HL',58238],
+        ['HnN',66769],
+        ['intestine',37826],
+        ['KS',24325],
+        ['larynx',78124],
+        ['LGL',1379],
+        ['liver',142625],
+        ['lung',1246515],
+        ['maleGen',10264],
+        ['maleGenCIS',5998],
+        ['MDS',63247],
+        ['melanoma',394404],
+        ['MM',131491],
+        ['MPN',47908],
+        ['nerves',8441],
+        ['NHL',359485],
+        ['OL',12769],
+        ['oral',237189],
+        ['other',17685],
+        ['otherCIS',2601],
+        ['otherMalig',186009],
+        ['ovary',162072],
+        ['pancreas',243335],
+        ['peritonium',20527],
+        ['pleura',17339],
+        ['prostate',1307551],
+        ['rectal',316974],
+        ['renal',297639],
+        ['respCIS',8271],
+        ['sinus',14280],
+        ['skin',33702],
+        ['skinCIS',264528],
+        ['stomach',164595],
+        ['testes',56967],
+        ['thymus',9198],
+        ['thyroid',210089],
+        ['unknown',1658],
+        ['uterus',288792],
+
+        ]);
+
+        var barchart_options = {title:'Cancer Type Frequency',
+                       width:1500,
+                       height:1200,
+                       legend: 'none'};
+        var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+        barchart.draw(data, barchart_options);
+      }
+</script>
+<body>
+    <!--Table and divs that hold the charts-->
+    <table class="columns">
+      <tr>
+        <td><div id="barchart_div" style="border: 1px solid #ccc"></div></td>
+      </tr>
+    </table>
+  </body>
+</html>
